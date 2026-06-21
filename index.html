@@ -240,6 +240,9 @@
     width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-weight: 800; font-size: 19px;
     background: linear-gradient(150deg, #1e2c47, #11192b); border: 1px solid var(--border-strong); color: var(--accent);
   }
+  .proj-logo.img {
+    padding: 0; background: #fff; overflow: hidden; object-fit: cover;
+  }
   .proj-ext { color: var(--muted-text); transition: color 0.2s; }
   .proj:hover .proj-ext { color: var(--accent); }
   .proj-ext svg { width: 17px; height: 17px; }
@@ -283,12 +286,35 @@
   .contact-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
   /* ---------- FOOTER ---------- */
-  footer { padding: 40px 0; border-top: 1px solid var(--border); }
-  .foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-  .foot p { font-size: 13.5px; color: var(--muted-text); }
-  .foot .fsoc { display: flex; gap: 18px; }
-  .foot .fsoc a { font-size: 13.5px; color: var(--muted-text); transition: color 0.2s; }
-  .foot .fsoc a:hover { color: var(--accent); }
+  footer {
+    margin-top: 40px; border-top: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+  }
+  .foot-main {
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px;
+    padding: 56px 0 40px;
+  }
+  @media (max-width: 760px) { .foot-main { grid-template-columns: 1fr; gap: 32px; } }
+  .foot-brand .logo { font-size: 17px; margin-bottom: 14px; }
+  .foot-brand p { font-size: 14px; color: var(--muted-text); max-width: 320px; margin-bottom: 18px; }
+  .foot-brand .tag { font-size: 12px; padding: 5px 12px; }
+  .foot-col h5 {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500;
+    color: var(--muted-text); letter-spacing: 0.04em; margin-bottom: 16px; text-transform: lowercase;
+  }
+  .foot-col h5::before { content: "// "; color: var(--accent); }
+  .foot-col a {
+    display: block; font-size: 14px; color: #cbd5e1; margin-bottom: 11px;
+    transition: color 0.2s var(--ease), transform 0.2s var(--ease); width: fit-content;
+  }
+  .foot-col a:hover { color: var(--accent); transform: translateX(3px); }
+  .foot-bottom {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    padding: 22px 0; border-top: 1px solid var(--border);
+  }
+  .foot-bottom p { font-size: 13px; color: var(--muted-text); }
+  .foot-bottom .made { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted-text); }
+  .foot-bottom .made .dot { width: 6px; height: 6px; border-radius: 99px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
 
   /* ---------- REVEAL ANIM ---------- */
   .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
@@ -486,7 +512,7 @@
     <div class="proj-grid">
       <a class="proj reveal" href="https://play.google.com/store/apps/details?id=in.stage&amp;hl=en_IN" target="_blank" rel="noopener">
         <div class="proj-top">
-          <div class="proj-logo">S</div>
+          <img class="proj-logo img" src="assets/stage.webp" alt="STAGE app icon" width="44" height="44" loading="lazy" />
           <span class="proj-ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         </div>
         <span class="badge">44M+ downloads</span>
@@ -497,7 +523,7 @@
 
       <a class="proj reveal" href="https://play.google.com/store/apps/details?id=com.contactmofidul.fling&amp;hl=en_IN" target="_blank" rel="noopener">
         <div class="proj-top">
-          <div class="proj-logo">F</div>
+          <img class="proj-logo img" src="assets/flingo.webp" alt="Flingo app icon" width="44" height="44" loading="lazy" />
           <span class="proj-ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         </div>
         <span class="badge">900K+ downloads</span>
@@ -508,7 +534,7 @@
 
       <a class="proj reveal" href="https://play.google.com/store/apps/details?id=com.flingo.flipfiction&hl=en" target="_blank" rel="noopener">
         <div class="proj-top">
-          <div class="proj-logo">Fi</div>
+          <img class="proj-logo img" src="assets/flipfiction.webp" alt="FlipFiction app icon" width="44" height="44" loading="lazy" />
           <span class="proj-ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
         </div>
         <span class="badge">Flutter</span>
@@ -619,12 +645,36 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap foot">
-    <p>© <span id="yr"></span> Mofidul Islam · Built with Flutter-grade attention to detail.</p>
-    <div class="fsoc">
-      <a href="https://www.linkedin.com/in/iammofidul/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://stackoverflow.com/users/5321847/mofidul-islam" target="_blank" rel="noopener">Stack Overflow</a>
-      <a href="mailto:contact.mofidul@gmail.com">Email</a>
+  <div class="wrap">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <a href="#top" class="logo"><span class="mark">M</span> Mofidul Islam</a>
+        <p>Senior Mobile Engineer building Flutter &amp; Android apps at millions-scale — pairing deep mobile craft with AI-driven engineering.</p>
+        <span class="tag"><span class="dot"></span> Available for senior roles &amp; consulting</span>
+      </div>
+
+      <div class="foot-col">
+        <h5>explore</h5>
+        <a href="#work">Highlights</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="Mofidul_Islam_Resume.pdf" download>Résumé (PDF)</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>connect</h5>
+        <a href="mailto:contact.mofidul@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/iammofidul/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://stackoverflow.com/users/5321847/mofidul-islam" target="_blank" rel="noopener">Stack Overflow</a>
+        <a href="https://play.google.com/store/apps/details?id=in.stage&amp;hl=en_IN" target="_blank" rel="noopener">STAGE on Play Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.contactmofidul.fling&amp;hl=en_IN" target="_blank" rel="noopener">Flingo on Play Store</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>© <span id="yr"></span> Mofidul Islam. All rights reserved.</p>
+      <span class="made"><span class="dot"></span> Designed &amp; built with Flutter-grade attention to detail</span>
     </div>
   </div>
 </footer>
