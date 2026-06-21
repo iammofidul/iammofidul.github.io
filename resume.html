@@ -4,131 +4,124 @@
 <meta charset="UTF-8" />
 <title>Mofidul Islam — Resume</title>
 <style>
-  /* ATS-friendly: single column, standard headings, real selectable text,
-     no tables / multi-column blocks / images / icons. */
-  @page { size: A4; margin: 11mm 14mm; }
+  /* ATS-friendly + recruiter-friendly: single column, standard headings,
+     real selectable text, impact-first bullets, generous whitespace. */
+  @page { size: A4; margin: 13mm 15mm; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Calibri', 'Carlito', 'Helvetica Neue', Arial, sans-serif;
-    color: #1a1a1a; font-size: 10.3px; line-height: 1.34;
+    color: #1a1a1a; font-size: 10.8px; line-height: 1.4;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   a { color: #0f5132; text-decoration: none; }
 
-  /* Header */
-  h1 { font-size: 23px; font-weight: 700; letter-spacing: 0.2px; }
-  .role-line { font-size: 11.5px; font-weight: 600; color: #15803d; margin-top: 2px; }
-  .contact { font-size: 9.7px; color: #333; margin-top: 5px; }
+  h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.2px; }
+  .role-line { font-size: 12px; font-weight: 600; color: #15803d; margin-top: 2px; }
+  .contact { font-size: 10px; color: #333; margin-top: 5px; }
   .contact a { color: #333; }
-  .rule { border: none; border-top: 1.5px solid #1a1a1a; margin: 9px 0 11px; }
+  .rule { border: none; border-top: 1.5px solid #1a1a1a; margin: 10px 0 12px; }
 
-  /* Sections */
   h2 {
-    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
-    color: #15803d; border-bottom: 1px solid #cbd5cb; padding-bottom: 2px;
-    margin: 9px 0 5px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    color: #15803d; border-bottom: 1px solid #cbd5cb; padding-bottom: 3px;
+    margin: 14px 0 8px;
   }
-  p.summary { font-size: 10.3px; color: #2a2a2a; }
+
+  p.summary { font-size: 10.6px; color: #2a2a2a; }
   p.summary b { color: #1a1a1a; }
 
-  /* Experience */
-  .job { margin-bottom: 7px; }
-  .job .jt { font-size: 11px; font-weight: 700; color: #1a1a1a; }
-  .job .jm { font-size: 9.7px; color: #444; font-style: italic; margin: 1px 0 3px; }
+  .job { margin-bottom: 11px; }
+  .job .top { display: flex; justify-content: space-between; align-items: baseline; }
+  .job .jt { font-size: 11.3px; font-weight: 700; color: #1a1a1a; }
+  .job .jd { font-size: 10px; color: #444; font-weight: 600; white-space: nowrap; }
+  .job .jc { font-size: 10px; color: #15803d; font-weight: 600; margin: 1px 0 4px; }
   ul { list-style: none; }
-  ul li { font-size: 10.2px; color: #2a2a2a; padding-left: 13px; position: relative; margin-bottom: 2px; }
-  ul li::before { content: "•"; position: absolute; left: 2px; color: #15803d; font-weight: 700; }
+  ul li { font-size: 10.5px; color: #2a2a2a; padding-left: 14px; position: relative; margin-bottom: 3px; }
+  ul li::before { content: "▸"; position: absolute; left: 1px; color: #15803d; font-size: 8px; top: 1px; }
   ul li b { color: #1a1a1a; }
 
-  /* Skills + simple lines */
-  .line { font-size: 10.2px; color: #2a2a2a; margin-bottom: 3px; }
+  .line { font-size: 10.5px; color: #2a2a2a; margin-bottom: 4px; }
   .line b { color: #1a1a1a; }
 </style>
 </head>
 <body>
 
   <h1>Mofidul Islam</h1>
-  <div class="role-line">Senior Mobile Engineer — Flutter / Android</div>
+  <div class="role-line">SDE III — Mobile · Flutter / Android</div>
   <div class="contact">
-    Noida, Uttar Pradesh 201301, India &nbsp;•&nbsp; +91 70023 24339 &nbsp;•&nbsp;
-    <a href="mailto:contact.mofidul@gmail.com">contact.mofidul@gmail.com</a><br>
-    LinkedIn: <a href="https://www.linkedin.com/in/iammofidul/">linkedin.com/in/iammofidul</a>
-    &nbsp;•&nbsp; Stack Overflow: <a href="https://stackoverflow.com/users/5321847/mofidul-islam">stackoverflow.com/u/mofidul-islam</a>
+    Noida, India &nbsp;•&nbsp; +91 70023 24339 &nbsp;•&nbsp;
+    <a href="mailto:contact.mofidul@gmail.com">contact.mofidul@gmail.com</a> &nbsp;•&nbsp;
+    <a href="https://www.linkedin.com/in/iammofidul/">linkedin.com/in/iammofidul</a> &nbsp;•&nbsp;
+    <a href="https://stackoverflow.com/users/5321847/mofidul-islam">stackoverflow.com/u/mofidul-islam</a>
   </div>
   <hr class="rule" />
 
-  <h2>Professional Summary</h2>
+  <h2>Summary</h2>
   <p class="summary">
-    Senior Mobile Engineer with <b>8+ years</b> building production mobile applications — <b>6+ years in Flutter</b>
-    and <b>4 years</b> as a native Android (Java) developer. Currently engineering <b>STAGE OTT</b>
-    (<b>44M+ downloads</b>, featured on Shark Tank India). Single-handedly designed and shipped the <b>Flingo</b>
-    dating app (870K+ downloads). Combines deep mobile craft with AI-driven engineering — an in-house <b>Delta OTA</b>
-    update system, autonomous build-test-PR agent loops (<b>Loop Engineering</b>), and an org-wide <b>AI engineering
-    playbook</b>.
+    Mobile engineer with <b>8+ years</b> (<b>6.5+ in Flutter</b>) shipping consumer apps at massive scale.
+    Currently <b>SDE III — Mobile</b> on <b>STAGE OTT</b> (<b>44M+ downloads</b>, Shark Tank India). Built and
+    shipped the <b>Flingo</b> dating app solo (<b>870K+ downloads</b>). Pairs deep Flutter/Android craft with
+    AI-driven engineering — in-house Delta OTA, autonomous build-test-PR agent loops, and an org-wide AI playbook.
   </p>
 
-  <h2>Technical Skills</h2>
-  <div class="line"><b>Languages &amp; Frameworks:</b> Flutter, Dart, Kotlin, Java, Jetpack Compose, XML</div>
-  <div class="line"><b>Architecture &amp; State Management:</b> MVVM, BLoC, Provider, GetX, Hilt</div>
-  <div class="line"><b>Backend &amp; Data:</b> REST API, Dio, Http, JWT Authentication, SQLite, Sqflite, Room</div>
-  <div class="line"><b>Firebase:</b> Authentication, Firestore, FCM, Crashlytics, Deep Links, Remote Config, A/B Testing</div>
-  <div class="line"><b>DevOps &amp; Testing:</b> Git, Bitbucket, GitHub CI, Tramline, Patrol, BrowserStack, LambdaTest</div>
-  <div class="line"><b>Payments:</b> Stripe, Razorpay, JusPay, Paytm, PhonePe</div>
-  <div class="line"><b>Analytics:</b> Amplitude, AppsFlyer, CleverTap, RudderStack, Adjust, Firebase</div>
-  <div class="line"><b>AI Engineering:</b> Claude Code, Codex, agentic workflows, custom skills/tooling</div>
-
-  <h2>Professional Experience</h2>
+  <h2>Experience</h2>
 
   <div class="job">
-    <div class="jt">Senior Software Engineer (Mobile) — STAGE OTT</div>
-    <div class="jm">Noida, India &nbsp;|&nbsp; Nov 2023 – Present</div>
+    <div class="top">
+      <div class="jt">SDE III — Mobile</div>
+      <div class="jd">Nov 2023 – Present</div>
+    </div>
+    <div class="jc">STAGE OTT · Noida, India</div>
     <ul>
-      <li>Build product features end-to-end for STAGE, a <b>44M+ download</b> OTT platform (featured on Shark Tank India), spanning research, planning, development, and project management.</li>
-      <li>Built an in-house <b>Delta OTA</b> (over-the-air) update system to ship Flutter patches to users without waiting on app-store review cycles.</li>
-      <li>Authored STAGE's org-wide <b>AI engineering playbook</b> — gstack with Claude &amp; Codex setup, auto-updating tooling via a <b>/update</b> command, and custom skills (<b>/stage-designer</b>, static-page deploy).</li>
-      <li>Designed <b>Loop Engineering</b> — builder-checker-looper agents that build any feature or fix bugs, run their own tests, and raise pull requests autonomously.</li>
-      <li>Rewrote the STAGE video player, increasing content consumption by <b>20%</b>.</li>
-      <li>Migrated the STAGE TV app to <b>Kotlin Jetpack Compose</b>, growing weekly active users from <b>100 to 4,000</b>.</li>
-      <li>Migrated Flutter integration tests to <b>Patrol</b>; integrated GitHub CI with LambdaTest and BrowserStack for automated release-cycle and device-farm testing.</li>
-      <li>Integrated <b>Tramline</b> to automate the release pipeline, reducing release time by <b>90%</b>.</li>
+      <li>Own product features end-to-end for a <b>44M+ download</b> OTT app — research, planning, development and delivery.</li>
+      <li>Built an in-house <b>Delta OTA</b> system to ship Flutter updates over-the-air, bypassing app-store review cycles.</li>
+      <li>Authored an org-wide <b>AI engineering playbook</b> (Claude &amp; Codex, <b>/update</b> auto-tooling, custom <b>/stage-designer</b> skill) and <b>Loop Engineering</b> agents that build, self-test and raise PRs autonomously.</li>
+      <li>Rewrote the video player, lifting content consumption <b>+20%</b>; migrated the TV app to <b>Kotlin Compose</b>, growing WAU <b>100 → 4,000</b>.</li>
+      <li>Automated releases with <b>Tramline</b> (<b>90% faster</b>) and CI testing via Patrol, GitHub CI, LambdaTest &amp; BrowserStack.</li>
     </ul>
   </div>
 
   <div class="job">
-    <div class="jt">Senior Software Engineer (Mobile) — STAGE OTT</div>
-    <div class="jm">Remote &nbsp;|&nbsp; Apr 2022 – Jun 2023</div>
+    <div class="top">
+      <div class="jt">Senior Software Engineer (Mobile)</div>
+      <div class="jd">Apr 2022 – Jun 2023</div>
+    </div>
+    <div class="jc">STAGE OTT · Remote</div>
     <ul>
-      <li>Responsible for initial research, planning, and developing any feature requested by the STAGE product team, and managing the project.</li>
-      <li>Implemented Facebook Ads deep links that reduced customer acquisition cost (CAC) for the STAGE app.</li>
+      <li>Led research, planning and development of features requested by the product team, and managed the project.</li>
+      <li>Implemented Facebook Ads deep links that reduced customer acquisition cost (<b>CAC</b>) for the STAGE app.</li>
     </ul>
   </div>
 
   <div class="job">
-    <div class="jt">Senior Software Engineer — ParkingRhino</div>
-    <div class="jm">Bangalore, India &nbsp;|&nbsp; Aug 2018 – Mar 2022</div>
+    <div class="top">
+      <div class="jt">Senior Software Engineer</div>
+      <div class="jd">Aug 2018 – Mar 2022</div>
+    </div>
+    <div class="jc">ParkingRhino · Bangalore, India</div>
     <ul>
-      <li>Built B2B parking-management software (Android) running on POS hardware, digitizing parking spaces pan-India.</li>
-      <li>Developed the PolyQ Flutter app for trainers and students; integrated <b>8+ POS printer SDKs</b>.</li>
-      <li>Owned research, planning, delivery, and client satisfaction across multiple products.</li>
+      <li>Built B2B parking-management software (Android) on POS hardware, digitizing parking spaces pan-India.</li>
+      <li>Developed the PolyQ Flutter app for trainers &amp; students; integrated <b>8+ POS printer SDKs</b>.</li>
     </ul>
   </div>
 
-  <h2>Projects</h2>
+  <h2>Key Projects</h2>
   <ul>
-    <li><b>STAGE (44M+ downloads)</b> — OTT platform for Haryanvi &amp; Rajasthani dialects; Stripe &amp; Razorpay recurring payments, deferred deep links, freemium, international login, 100+ APIs, 50+ A/B tests. Flutter, Kotlin, Jetpack Compose.</li>
-    <li><b>Flingo (870K+ downloads)</b> — Dating app to find people nearby; designed, built, published, and maintained single-handedly. Backed by an SEO landing funnel driving 13K+ clicks at a 30% app-install rate. Android, Java, Firebase.</li>
-    <li><b>FlipFiction</b> — Romantic fiction, short stories, and thriller reader. Flutter, Dart.</li>
-    <li><b>Parkin / Parkola</b> — QR-based parking booking with in-app wallet payments. Flutter, Dart.</li>
-    <li><b>PolyQ</b> — Online training-course booking app for trainers and students. Flutter, Dart.</li>
-    <li><b>ParkingRhino B2B</b> — POS-machine parking-management app, including a Kuwait white-label build. Java, Android.</li>
+    <li><b>STAGE</b> (44M+ downloads) — OTT for Haryanvi &amp; Rajasthani dialects: Stripe &amp; Razorpay recurring payments, deep links, freemium, international login, 100+ APIs, 50+ A/B tests. <i>Flutter, Kotlin, Compose.</i></li>
+    <li><b>Flingo</b> (870K+ downloads) — Dating app built, shipped &amp; maintained solo; SEO funnel driving 13K+ clicks at a 30% install rate. <i>Android, Java, Firebase.</i></li>
+    <li><b>Also:</b> FlipFiction (Flutter reader) · Parkin &amp; Parkola (QR parking + wallet) · PolyQ (course booking) · ParkingRhino B2B (POS parking, incl. Kuwait white-label).</li>
   </ul>
 
-  <h2>Education</h2>
-  <div class="line"><b>B.E., Computer Science &amp; Engineering</b> — Assam Engineering College, Guwahati &nbsp;|&nbsp; 2014 – 2018</div>
+  <h2>Skills</h2>
+  <div class="line"><b>Mobile:</b> Flutter, Dart, Kotlin, Java, Jetpack Compose · <b>Architecture:</b> MVVM, BLoC, Provider, GetX, Hilt</div>
+  <div class="line"><b>Backend &amp; Firebase:</b> REST API, Dio, JWT, SQLite, Room · Auth, Firestore, FCM, Crashlytics, Remote Config, A/B Testing</div>
+  <div class="line"><b>DevOps &amp; Testing:</b> Git, GitHub CI, Tramline, Patrol, BrowserStack, LambdaTest</div>
+  <div class="line"><b>Payments &amp; Analytics:</b> Stripe, Razorpay, JusPay, PhonePe · Amplitude, AppsFlyer, CleverTap, RudderStack, Adjust</div>
+  <div class="line"><b>AI Engineering:</b> Claude Code, Codex, agentic workflows, custom skills &amp; tooling</div>
 
-  <h2>Awards &amp; Languages</h2>
-  <div class="line"><b>Awards:</b> AFMI Silver Medals — 2nd among Muslims, Assam (HSLC 2011; HS 2013)</div>
-  <div class="line"><b>Languages:</b> English, Hindi (Professional); Assamese, Bengali (Native)</div>
+  <h2>Education &amp; Recognition</h2>
+  <div class="line"><b>B.E., Computer Science &amp; Engineering</b> — Assam Engineering College, Guwahati (2014–2018)</div>
+  <div class="line"><b>Awards:</b> AFMI Silver Medals, 2nd among Muslims in Assam (HSLC 2011; HS 2013) · <b>Languages:</b> English, Hindi, Assamese, Bengali</div>
 
 </body>
 </html>
