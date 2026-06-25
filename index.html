@@ -129,6 +129,26 @@
   }
   .tag .dot { width: 6px; height: 6px; border-radius: 99px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
 
+  /* Live availability badge */
+  .availability {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 500; color: #d7e3d3;
+    background: linear-gradient(180deg, rgba(34,197,94,0.10), rgba(34,197,94,0.04));
+    border: 1px solid rgba(34,197,94,0.30); padding: 7px 15px 7px 13px; border-radius: 99px;
+    box-shadow: 0 0 0 1px rgba(34,197,94,0.04), 0 8px 24px -14px rgba(34,197,94,0.5);
+  }
+  .availability b { color: var(--accent); font-weight: 650; }
+  .availability .pulse { position: relative; width: 9px; height: 9px; flex: none; }
+  .availability .pulse::before,
+  .availability .pulse::after { content: ""; position: absolute; inset: 0; border-radius: 99px; background: var(--accent); }
+  .availability .pulse::after { box-shadow: 0 0 8px var(--accent); }
+  .availability .pulse::before { animation: pulse-ring 2s var(--ease) infinite; }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.7; }
+    70%, 100% { transform: scale(2.6); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .availability .pulse::before { animation: none; } }
+
   /* ---------- SECTION ---------- */
   section { padding: 92px 0; }
   .eyebrow {
@@ -343,7 +363,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag"><span class="dot"></span> Available for senior mobile roles &amp; consulting</span>
+      <span class="availability"><span class="pulse"></span><b>Available</b> for senior mobile roles &amp; consulting</span>
       <h1>Senior Mobile Engineer<br>building apps at <span class="grad">millions-scale</span>.</h1>
       <p class="lead">I'm Mofidul — 8+ years shipping production Flutter &amp; Android apps. Currently engineering <strong style="color:#fff">STAGE OTT</strong> (44M+ downloads), and creator of the <strong style="color:#fff">Flingo</strong> dating app (900K+ downloads).</p>
       <p class="sub">I pair deep mobile craft with AI-driven engineering — Delta OTA delivery, autonomous build-test-PR loops, and org-wide AI playbooks.</p>
